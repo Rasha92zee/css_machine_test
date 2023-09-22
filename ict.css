@@ -1,0 +1,230 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&display=swap'); */
+
+#logo {
+    width: 35px;
+}
+
+#header {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    /* padding-bottom: 30px; */
+}
+
+.navbar {
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
+    font-family: 'Josefin Sans', sans-serif;
+    box-shadow: 1px 2px 3px rgb(237, 231, 231);
+    background: rgba(37, 36, 36, 0.2);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgb(180, 129, 243);
+    transition: .2s;
+}
+
+#subscribe {
+    border: none;
+    /* background-image: linear-gradient(80deg, rgb(124, 78, 230), rgb(106, 206, 237)); */
+    background-image: linear-gradient(80deg, rgb(81, 41, 174), rgb(219, 106, 237));
+    padding: 8px 22px;
+    border-radius: 22px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .4s;
+}
+#subscribe:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* min-height: 100vh; */
+    background-image: url('/images/background.png');
+    /* background-size: cover; */
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.countdown {
+    height: 520px;
+    text-align: center;
+    color: rgb(202, 162, 231);
+    /* transform: translateY(50%); */
+    margin-top: 35px;
+}
+.countdown h1 {  
+    font-size: 40px;
+    font-weight: 700px;
+    letter-spacing: 10px;
+    margin-bottom: -15px;
+}
+.countdown #p1 {
+    font-size: 28px;
+    letter-spacing: 4px;
+}
+.countdown #p1 span {
+    color: rgb(150, 69, 249);
+}
+.countdown #btn1 {
+    background: transparent;
+    border: 2px solid rgb(209, 123, 243);
+    outline: none;
+    border-radius: 8px;
+    padding: 7px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: white;
+}
+.countdown #btn1:hover{
+    transform: scale(1.1);
+}
+
+.launch {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -100px;
+    margin-bottom: 2px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.launch div {
+     flex-basis: 100px;
+}
+.launch div p {
+    font-size: 110px;
+    margin-bottom: -20px;
+    color: white;
+}   
+.launch div span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#p2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: -10px;
+}
+#p3 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    /* margin-bottom: px; */
+}
+
+.ball {
+    width: 70px;
+    margin-top: 20px;
+    margin-left: -600px;
+    margin-bottom: -10px;
+    animation: ball 4s infinite;
+}
+@keyframes ball {
+    0%{
+        left: 0;
+        opacity: 0;
+    }
+    100%{
+        margin-left: 600px;
+    }  
+}
+
+#worldCup {
+    width: 100%;
+    height: 650px;
+}
+
+#bookTickets{
+    position: relative;
+    text-align: center;
+}
+#bookNow {
+    position: absolute;
+    left: 563px;
+    bottom: -560px;
+    color: rgb(195, 174, 220);
+    font-size: larger;
+    font-weight: 600;
+    font-style: italic;
+    text-align: center;
+}
+
+#tickets {
+   position: absolute;
+   left: 594px;
+   bottom: -650px;
+   height: 55px;
+   width: 78px;
+   /* padding: 10px; */
+   border-radius:20px;
+   border: 2px solid pink;
+   font-size: 14px;
+   font-weight: 600;
+   letter-spacing: 2px;
+   color: rgb(226, 221, 228);
+   background: transparent;
+}
+#tickets:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+}
+#tickets:before {
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    right: -5px;
+    left: -5px;
+    bottom: -5px;
+    border-radius:20px;
+    filter: blur(7px);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+#tickets:hover:before {
+    opacity: 1;
+    z-index: -1;
+}
+#tickets:hover {
+    z-index: 1;
+    animation: glow 9s linear infinite;
+}
+@keyframes glow {
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+
